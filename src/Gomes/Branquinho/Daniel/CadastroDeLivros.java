@@ -4,30 +4,32 @@ public class CadastroDeLivros {
 
     public static void main(String[] args) {
 
-        Autor autor = new Autor();
-        autor.nome = "Rodrigo";
-        autor.email = "rodrigo@hotmail.com";
-        autor.cpf = "452.215.365.8";
+        Autor autor1 = new Autor();
+        autor1.setNome("Rodrigo");
+        autor1.setEmail("rodrigo@hotmail.com");
+        autor1.setCpf("452.215.365.8");
 
-        Livros livro = new Livros();
-        livro.nome = "Teste Java";
-        livro.descricao = "Fala sobre java";
-        livro.valor = 59;
-        livro.isbn = "7777";
-        livro.autor = autor;
-        livro.mostrarDetalhes();
+        Livros livro1 = new Livros(autor1);
+        livro1.setNome("Teste Java");
+        livro1.setDescricao("Fala sobre java");
+        livro1.setValor(59);
+        livro1.setIsbn("7777");
+
+
+        livro1.mostrarDetalhes();
 
         Autor autor2 = new Autor();
-        autor2.nome = "Antonio";
-        autor2.email = "antonio@uol.com";
-        autor2.cpf = "896.658.964.32";
+        autor2.setNome("Alberto");
+        autor2.setEmail("alb@gmail.com");
+        autor2.setCpf("357.890.678.5");
 
-        Livros livro2 = new Livros();
-        livro2.nome = "Programando";
-        livro2.descricao = "Programação";
-        livro2.valor = 150;
-        livro2.isbn = "696969";
-        livro2.autor = autor2;
+        Livros livro2 = new Livros(autor2);
+        livro2.setNome("Teste OO");
+        livro2.setDescricao("Fala sobre OO");
+        livro2.setValor(150);
+        livro2.setIsbn("9999");
+
+
         livro2.mostrarDetalhes();
 
     }

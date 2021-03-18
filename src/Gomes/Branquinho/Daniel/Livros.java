@@ -1,15 +1,20 @@
 package Gomes.Branquinho.Daniel;
 
 public class Livros {
-    String nome;
-    String descricao;
-    double valor;
-    String isbn;
-    Autor autor;
+    private String  nome;
+    private String descricao;
+    private double valor;
+    private String isbn;
+    private Autor autor;
 
     public Livros(){
-        System.out.println("novo livro criado");
     }
+
+    public Livros(Autor autor){
+        this.autor = autor;
+    }
+
+
 
     void mostrarDetalhes(){
         String mensagem = "Mostrando detalhes do livro";
@@ -23,5 +28,50 @@ public class Livros {
 
 
     }
+    public boolean aplicaDescontoDe(double porcentagem){
+        if(porcentagem > 0.3){
+            return false;
+        }
+        this.valor -= this.valor * porcentagem;
+        return true;
+    }
+
+    public double getValor(){
+        return valor;
+    }
+    public void setValor(double valor){
+        this.valor = valor;
+    }
+
+    public String getNome(){
+        return nome;
+    }
+    public void setNome(String nome){
+        this.nome = nome;
+    }
+
+    public String getDescricao(){
+        return descricao;
+    }
+    public void setDescricao(String descricao){
+        this.descricao = descricao;
+    }
+
+    public String getIsbn(){
+        return isbn;
+    }
+    public void setIsbn (String isbn){
+        this.isbn = isbn;
+    }
+
+    public Autor getAutor(){
+        return autor;
+    }
+    public void setAutor(Autor autor){
+        this.autor = autor;
+    }
+
+
+
 
 }
